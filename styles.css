@@ -91,9 +91,11 @@ section p {
     font-size: 1.3rem;
 }
 
-.tarjeta p {
+..tarjeta p {
     font-size: 1rem;
-}.boton {
+}
+
+.boton {
     display: inline-block;
     margin-top: 30px;
     background: #5E7A5A;
@@ -106,4 +108,5 @@ section p {
 
 .boton:hover {
     background: #496146;
+}
 }
