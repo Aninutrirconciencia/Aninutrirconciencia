@@ -109,3 +109,13 @@ section p {
 .boton:hover {
     background: #496146;
 }
+.foto-perfil {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 30px auto;
+    border: 6px solid white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
