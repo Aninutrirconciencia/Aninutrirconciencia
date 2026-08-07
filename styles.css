@@ -153,3 +153,22 @@ a {
     border-radius: 25px;
     line-height: normal;
 }
+@media (max-width: 768px) {
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .boton {
+        padding: 12px 22px;
+    }
+
+}
