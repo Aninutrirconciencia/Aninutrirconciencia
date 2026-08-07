@@ -119,10 +119,11 @@ section p {
     border: 6px solid white;
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 .sobre-mi img {
-    width: 180px;
-    height: 180px;
+    width: 180px !important;
+    height: 180px !important;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 50% !important;
     display: block;
     margin: 0 auto 20px;
+
 }
