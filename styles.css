@@ -11,7 +11,11 @@ body {
     line-height: 1.6;
 }
 
-/* PORTADA */
+
+/* =========================
+   PORTADA
+========================= */
+
 header {
     position: relative;
     background-image: url("fondo-portada.jpg");
@@ -23,7 +27,6 @@ header {
     color: white;
 }
 
-/* Capa suave sobre la imagen */
 header::before {
     content: "";
     position: absolute;
@@ -32,155 +35,81 @@ header::before {
     z-index: 0;
 }
 
-/* Hace que el contenido quede por encima de la capa */
 header > * {
     position: relative;
     z-index: 1;
 }
 
+
+/* =========================
+   FOTO DE PERFIL
+========================= */
+
+.foto-perfil {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px;
+    border: 6px solid white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   PORTADA - TEXTO
+========================= */
+
 header h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-size: 2.8rem;
+    max-width: 850px;
+    margin: 15px auto 20px;
+    line-height: 1.2;
 }
 
 header p {
     font-size: 1.2rem;
     max-width: 700px;
-    margin: auto;
+    margin: 0 auto 15px;
 }
 
-header a {
-    display: inline-block;
-    margin-top: 30px;
-    background: #5E7A5A;
-    color: white;
-    text-decoration: none;
-    padding: 14px 28px;
-    border-radius: 40px;
+.bienvenida {
     font-weight: bold;
-}
-
-header a:hover {
-    background: #496146;
-}
-
-/* FOTO DE PERFIL */
-.foto-perfil {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto 20px;
-    border: 6px solid white;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-/* CONTENIDO */
-main {
-    max-width: 1100px;
-    margin: auto;
-    padding: 60px 20px;
-}
-
-section {
-    background: white;
-    margin-bottom: 40px;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
-section h2 {
-    color: #5E7A5A;
-    margin-bottom: 20px;
-    font-size: 2rem;
-}
-
-section p {
-    font-size: 1.1rem;
-}
-
-/* TARJETAS */
-.tarjetas {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    margin-top: 30px;
-}
-
-.tarjeta {
-    background: #F8F6F2;
-    padding: 30px;
-    border-radius: 20px;
-    border: 1px solid #D8E8D2;
-}
-
-.tarjeta h3 {
-    color: #5E7A5A;
-    margin-bottom: 15px;
     font-size: 1.3rem;
 }
 
-.tarjeta p {
-    font-size: 1rem;
-}
 
-/* BOTONES */
+/* =========================
+   BOTONES
+========================= */
+
 .boton {
     display: inline-block;
-    padding: 12px 25px;
+    padding: 13px 28px;
     margin: 20px auto;
-    border-radius: 25px;
+    border-radius: 30px;
     line-height: normal;
     background: #5E7A5A;
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s ease;
 }
 
 .boton:hover {
     background: #496146;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 40px;
-    background: #E8E3DA;
+    transform: translateY(-2px);
 }
 
 a {
     text-decoration: none;
 }
 
-/* CELULAR */
-@media (max-width: 768px) {
 
-    .tarjetas {
-        grid-template-columns: 1fr;
-    }
-
-    h1 {
-        font-size: 32px;
-    }
-
-    h2 {
-        font-size: 26px;
-    }
-
-    .boton {
-        padding: 12px 22px;
-    }
-
-}    padding: 14px 28px;
-    border-radius: 40px;
-    font-weight: bold;
-}
-
-header a:hover {
-    background: #496146;
-}
+/* =========================
+   CONTENIDO
+========================= */
 
 main {
     max-width: 1100px;
@@ -188,17 +117,17 @@ main {
     padding: 60px 20px;
 }
 
-footer {
-    text-align: center;
-    padding: 40px;
-    background: #E8E3DA;
-}
+
+/* =========================
+   SECCIONES
+========================= */
+
 section {
     background: white;
     margin-bottom: 40px;
     padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 section h2 {
@@ -210,6 +139,12 @@ section h2 {
 section p {
     font-size: 1.1rem;
 }
+
+
+/* =========================
+   TARJETAS
+========================= */
+
 .tarjetas {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -234,85 +169,131 @@ section p {
     font-size: 1rem;
 }
 
-.boton {
-    display: inline-block;
-    margin-top: 30px;
-    background: #5E7A5A;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 50px;
-    text-decoration: none;
+
+/* =========================
+   CONSULTA DESTACADA
+========================= */
+
+.consulta-destacada {
+    text-align: center;
+    border: 2px solid #A8C3A0;
+    background: #F8FBF6;
+}
+
+.consulta-destacada h2 {
+    font-size: 2.2rem;
+}
+
+.acompanamiento {
+    font-size: 1rem !important;
+    font-weight: bold;
+    color: #687563;
+    margin: 0 0 20px;
+}
+
+
+/* =========================
+   PRODUCTOS DESTACADOS
+========================= */
+
+.producto-destacado {
+    text-align: center;
+    margin-top: 40px;
+    padding: 35px 25px;
+    background: #F8FBF6;
+    border: 2px solid #A8C3A0;
+    border-radius: 20px;
+}
+
+.producto-destacado h3 {
+    color: #5E7A5A;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.incluye {
     font-weight: bold;
 }
 
-.boton:hover {
-    background: #496146;
-}
-.foto-perfil {
-    width: 220px;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 50%;
-    display: block;
-    margin: 30px auto;
-    border: 6px solid white;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-.sobre-mi img {
-    width: 180px !important;
-    height: 180px !important;
-    object-fit: cover;
-    border-radius: 50% !important;
-    display: block;
-    margin: 0 auto 20px;
 
+/* =========================
+   PRECIOS
+========================= */
+
+.precio {
+    display: inline-block;
+    background: #D8E8D2;
+    color: #3F4A3C;
+    font-size: 2rem !important;
+    font-weight: 900;
+    padding: 8px 22px;
+    border-radius: 30px;
+    margin: 18px 0 8px;
+    border: 2px solid #A8C3A0;
 }
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    padding: 50px 30px;
+    background: #E8E3DA;
+}
+
+footer h2 {
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 70px 20px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1.05rem;
+    }
+
     .foto-perfil {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto 20px;
-}
-    .boton {
-    display: inline-block;
-    width: auto;
-    padding: 12px 25px;
-    margin: 30px auto;
-    text-align: center;
-}
-a {
-    text-decoration: none;
-}
+        width: 150px;
+        height: 150px;
+    }
 
-.boton {
-    display: inline-block;
-    padding: 12px 25px;
-    margin: 20px auto;
-    border-radius: 25px;
-    line-height: normal;
-}
-@media (max-width: 768px) {
+    main {
+        padding: 40px 15px;
+    }
+
+    section {
+        padding: 30px 20px;
+    }
+
+    section h2 {
+        font-size: 1.7rem;
+    }
 
     .tarjetas {
         grid-template-columns: 1fr;
     }
 
-    h1 {
-        font-size: 32px;
+    .precio {
+        font-size: 1.7rem !important;
+        font-weight: 900;
     }
 
-    h2 {
-        font-size: 26px;
+    .consulta-destacada h2 {
+        font-size: 1.8rem;
     }
 
-    .boton {
-        padding: 12px 22px;
-    }
-
-}header {
-    background-image: url("fondo-portada.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
