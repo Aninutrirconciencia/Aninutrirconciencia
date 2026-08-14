@@ -171,4 +171,9 @@ a {
         padding: 12px 22px;
     }
 
+}header {
+    background-image: url("fondo-portada.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
